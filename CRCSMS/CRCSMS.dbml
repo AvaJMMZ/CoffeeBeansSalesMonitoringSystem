@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CRCSMS" Class="CRCSMSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=JOANNAH\SQLEXPRESS;Initial Catalog=CRCSMS;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="CRCSMS.Properties.Settings" SettingsPropertyName="CRCSMSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblAdmin" Member="tblAdmins">
+    <Type Name="tblAdmin">
+      <Column Name="adminID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mobile" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblOrderDetails" Member="tblOrderDetails">
+    <Type Name="tblOrderDetail">
+      <Column Name="orderDetailID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="orderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="productID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="roastType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="groundType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="productTotalPayment" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMonthlyExp" Member="tblMonthlyExps">
+    <Type Name="tblMonthlyExp">
+      <Column Name="monthExpID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="monthExpName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="monthlyBudget" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblExpProcess" Member="tblExpProcesses">
+    <Type Name="tblExpProcess">
+      <Column Name="processID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="dateProcess" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="coffeeBean" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="priceCB" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="totalexpCD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="worker" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="salary" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="totalSalary" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sticker" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="priceSt" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="totalexpSt" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="gasTank" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="priceGS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="totalexpGS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="aPU" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="aPP" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="aTotal" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="bPU" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="bPP" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="bTotal" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="cPU" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="cPP" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="cTotal" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="totalexpProcess" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblOrders" Member="tblOrders">
+    <Type Name="tblOrder">
+      <Column Name="orderID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dateOrdered" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="orderTotalPayment" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblProducts" Member="tblProducts">
+    <Type Name="tblProduct">
+      <Column Name="productID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="productName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="gram" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mediumRoast" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="darkRoast" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="wholeBeans" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="coarseGround" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="fineGround" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblProdStocks" Member="tblProdStocks">
+    <Type Name="tblProdStock">
+      <Column Name="stockID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="productID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="stocks" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

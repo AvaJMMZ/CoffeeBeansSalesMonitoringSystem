@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7627E318-81E5-4756-9746-9C049FDDAAFB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CRCSMS</RootNamespace>
+    <AssemblyName>CRCSMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CRCSMS.cs">
+      <DependentUpon>CRCSMS.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="CRCSMS.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRCSMS.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="CRCSMSDataSet_dgvProductList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRCSMSDataSet_dgvProductList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRCSMSDataSet_tblExpProcess.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRCSMSDataSet_tblExpProcess.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRCSMSDataSet_tblMonthlyExp.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRCSMSDataSet_tblMonthlyExp.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRCSMSDataSet_tblOrderDetails.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRCSMSDataSet_tblOrderDetails.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRCSMSDataSet_tblOrders.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRCSMSDataSet_tblOrders.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRCSMSDataSet_tblProducts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRCSMSDataSet_tblProducts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddMonthly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddMonthly.Designer.cs">
+      <DependentUpon>frmAddMonthly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddProcess.Designer.cs">
+      <DependentUpon>frmAddProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddStocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddStocks.Designer.cs">
+      <DependentUpon>frmAddStocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMoreDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMoreDetails.Designer.cs">
+      <DependentUpon>frmMoreDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddOrder.Designer.cs">
+      <DependentUpon>frmAddOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditProduct.Designer.cs">
+      <DependentUpon>frmEditProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddProduct.Designer.cs">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExpMonthly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExpMonthly.Designer.cs">
+      <DependentUpon>frmExpMonthly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExpPerProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExpPerProcess.Designer.cs">
+      <DependentUpon>frmExpPerProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessExpDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessExpDetails.Designer.cs">
+      <DependentUpon>frmProcessExpDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProducts.Designer.cs">
+      <DependentUpon>frmProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportSales.Designer.cs">
+      <DependentUpon>frmReportSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSales.Designer.cs">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="frmAddMonthly.resx">
+      <DependentUpon>frmAddMonthly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddProcess.resx">
+      <DependentUpon>frmAddProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddStocks.resx">
+      <DependentUpon>frmAddStocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExpMonthly.resx">
+      <DependentUpon>frmExpMonthly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExpPerProcess.resx">
+      <DependentUpon>frmExpPerProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMoreDetails.resx">
+      <DependentUpon>frmMoreDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOrder.resx">
+      <DependentUpon>frmAddOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditProduct.resx">
+      <DependentUpon>frmEditProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddProduct.resx">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessExpDetails.resx">
+      <DependentUpon>frmProcessExpDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProducts.resx">
+      <DependentUpon>frmProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportSales.resx">
+      <DependentUpon>frmReportSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSales.resx">
+      <DependentUpon>frmSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <None Include="CRCSMS.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>CRCSMS.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRCSMS.dbml.layout">
+      <DependentUpon>CRCSMS.dbml</DependentUpon>
+    </None>
+    <None Include="CRCSMSDataSet_dgvProductList.xsc">
+      <DependentUpon>CRCSMSDataSet_dgvProductList.xsd</DependentUpon>
+    </None>
+    <None Include="CRCSMSDataSet_dgvProductList.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRCSMSDataSet_dgvProductList.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRCSMSDataSet_dgvProductList.xss">
+      <DependentUpon>CRCSMSDataSet_dgvProductList.xsd</DependentUpon>
+    </None>
+    <None Include="CRCSMSDataSet_tblExpProcess.xsc">
+      <DependentUpon>CRCSMSDataSet_tblExpProcess.xsd</DependentUpon>
+    </None>
+    <None Include="CRCSMSDataSet_tblExpProcess.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRCSMSDataSet_tblExpProcess.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRCSMSDataSet_tblExpProcess.xss">
+      <DependentUpon>CRCSMSDataSet_tblExpProcess.xsd</DependentUpon>
+    </None>
+    <None Include="CRCSMSDataSet_tblMonthlyExp.xsc">
+      <DependentUpon>CRCSMSDataSet_tblMonthlyExp.xsd</DependentUpon>
+    </None>
+    <None Include="CRCSMSDataSet_tblMonthlyExp.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRCSMSDataSet_tblMonthlyExp.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRCSMSDataSet_tblMonthlyExp.xss">
+      <DependentUpon>CRCSMSDataSet_tblMonthlyExp.xsd</DependentUpon>
+    </None>
+    <None Include="CRCSMSDataSet_tblOrderDetails.xsc">
+      <DependentUpon>CRCSMSDataSet_tblOrderDetails.xsd</DependentUpon>
+    </None>
+    <None Include="CRCSMSDataSet_tblOrderDetails.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRCSMSDataSet_tblOrderDetails.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRCSMSDataSet_tblOrderDetails.xss">
+      <DependentUpon>CRCSMSDataSet_tblOrderDetails.xsd</DependentUpon>
+    </None>
+    <None Include="CRCSMSDataSet_tblOrders.xsc">
+      <DependentUpon>CRCSMSDataSet_tblOrders.xsd</DependentUpon>
+    </None>
+    <None Include="CRCSMSDataSet_tblOrders.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRCSMSDataSet_tblOrders.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRCSMSDataSet_tblOrders.xss">
+      <DependentUpon>CRCSMSDataSet_tblOrders.xsd</DependentUpon>
+    </None>
+    <None Include="CRCSMSDataSet_tblProducts.xsc">
+      <DependentUpon>CRCSMSDataSet_tblProducts.xsd</DependentUpon>
+    </None>
+    <None Include="CRCSMSDataSet_tblProducts.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRCSMSDataSet_tblProducts.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRCSMSDataSet_tblProducts.xss">
+      <DependentUpon>CRCSMSDataSet_tblProducts.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CRCSMS">
+  <DataContextMoniker Name="/CRCSMSDataContext" />
+  <nestedChildShapes>
+    <classShape Id="95a9a3b2-0517-4f02-9b4c-9c9ac163e808" absoluteBounds="3, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/CRCSMSDataContext/tblAdmin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bbaca491-879c-4ff5-8b0f-bca5af28885a" absoluteBounds="3.015, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7f88e900-5ff0-4f72-84cf-78408c1bcb41" absoluteBounds="1.875, 4, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CRCSMSDataContext/tblOrderDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cdf89efb-63d2-448e-a60c-8ea004a986cc" absoluteBounds="1.8900000000000001, 4.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b57e5dbb-3901-4b2e-91a3-bc520de17a6e" absoluteBounds="2.25, 1.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CRCSMSDataContext/tblMonthlyExp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a0f584be-dcba-4b21-90bf-9b7b0e6cd29a" absoluteBounds="2.265, 2.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c78b0e6f-b6ab-4f42-950d-7b646185a23b" absoluteBounds="0.5, 0.5, 2, 5.4246240234375">
+      <DataClassMoniker Name="/CRCSMSDataContext/tblExpProcess" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16aabe2a-2f2f-4758-837d-ab56b539e970" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7ee54a80-fa30-46d3-b54b-2ab476418536" absoluteBounds="3.875, 3.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CRCSMSDataContext/tblOrder" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e4bac776-cf30-4621-9d89-8da2b7c9a579" absoluteBounds="3.8899999999999997, 3.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b9d56f3d-0c94-4419-9fdc-ec200b5906b4" absoluteBounds="3.875, 0.875, 2, 2.5401025390625">
+      <DataClassMoniker Name="/CRCSMSDataContext/tblProduct" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9b8e5b5c-85dc-4b33-aecc-440fa265baa7" absoluteBounds="3.8899999999999997, 1.335, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a1d26b8-89d9-4d12-9d31-be5c326af7ae" absoluteBounds="3.375, 4.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CRCSMSDataContext/tblProdStock" />
+      <nestedChildShapes>
+        <elementListCompartment Id="97c5e29e-8ce3-4b4e-a698-6cf8f746cc9a" absoluteBounds="3.3899999999999997, 4.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
